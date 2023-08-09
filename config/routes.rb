@@ -3,4 +3,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  
+  #PostsController
+  get 'posts/new', to: 'posts#new', as: 'new_post'
+  
+  get '/topics/new', to: 'new Action', as: 'new_post'
+  
+  get '/topics/edit', to: 'edit Action', as 'new_post'
+  
+  
 end
+
