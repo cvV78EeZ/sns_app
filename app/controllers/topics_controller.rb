@@ -16,5 +16,10 @@ class TopicsController < ApplicationController
   
   def update
     redirect_to 'topics/edit'
-  end  
+  end
+  
+  
+  def /
+　  render :/
+　 end 
 end

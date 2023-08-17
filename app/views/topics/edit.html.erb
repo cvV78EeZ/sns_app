@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Edit Topic</title>
+</html> 
+  </head>
+<body>
+  <h1>Edit topic</h1>
+  <from>
+     <label for="topic_title">Title:</label>
+    <input type="text" id="topic_title" name="topic[title]" value="<%= @topic.title %>"><br>
+
+    <label for="topic_content">Content:</label>
+    <textarea id="topic_content" name="topic[content]"><%= @topic.content %></textarea><br>
+
+    <input type="submit" value="Update Topic">
+  </from>
+  <a href="<%= topic_path(@topic) %>">Back to Topic</a>
+</body>
+</html>
+
+
+
+
+<div>
+  <h1>
+    スレッド編集
+  </h1>
+</div>
