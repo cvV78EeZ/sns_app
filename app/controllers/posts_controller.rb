@@ -1,9 +1,13 @@
 class PostsController < ApplicationController
   def new
     render :new
-  end 
+  end
   
-  def index 
+  def index
     render :index
-  end 
+  end
+  
+   def create
+    redirect_to new_post_path # redirects to GET "/posts/new"
+   end
 end
