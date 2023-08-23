@@ -5,12 +5,9 @@ class TopicsController < ApplicationController
   
   
   def create
-    redirect_to 'topics/new'
+    redirect_to new_topics_path
   end  
   
-  def create
-    redirect_to new_topics_path 
-  end
   
   
   def edit 
@@ -19,6 +16,11 @@ class TopicsController < ApplicationController
   
   
   def update
-    redirect_to 'topics/edit'
+    redirect_to edit_topics_path
   end
+  
+  def myname
+    render :myname
+  end  
 end
+  

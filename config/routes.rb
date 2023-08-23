@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   post 'topics/new', to: 'topics#create', as: 'create_topics'
   
   get 'topics/edit', to: 'topics#edit', as: 'edit_topics'
+  post 'topics/edit', to: 'topics#update', as: 'update_topics'
   
+  get 'topics/myname', to: "topics#myname", as: 'myname_topics'
   
 end
 
