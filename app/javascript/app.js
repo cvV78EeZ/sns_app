@@ -17,3 +17,9 @@ document.addEventListener("turbo:load", function() {
 
       reader.addEventListener("load", function() {
         imagePreviewImage.setAttribute("src", this.result);
+      });
+
+      reader.readAsDataURL(file);
+    }
+  });
+});

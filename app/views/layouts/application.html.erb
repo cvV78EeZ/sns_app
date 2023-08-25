@@ -30,6 +30,12 @@
           <li>
             <%= link_to "新規投稿", new_post_path, class: "nav-link" %>
           </li>
+          <li>
+            <%= link_to "プロフィール閲覧画面", index_profile_path, class: "nav-link" %>
+          </li>
+          <li>
+            <%= link_to "プロフィール編集", edit_profile_path, class: "nav-link" %>
+          </li>
         <% else %>
           <li>
             <%= link_to "新規登録", new_user_registration_path,class: "nav-link" %>
