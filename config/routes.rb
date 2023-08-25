@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   
   get '/profile', to: 'profile#index', as: 'index_profile'
   
-  get '/proile/edit', to: 'profile#edit', as: 'edit_profile'
+  get '/profile/edit', to: 'profile#edit', as: 'edit_profile'
 end
 
