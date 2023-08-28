@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     end
   end
   
-　 def edit
+　def edit
     @post = Post.find(params[:id])
     render :edit
   end
@@ -47,15 +47,14 @@ class PostsController < ApplicationController
     end
   end
   
-  private
-  def post_params
-    params.require(:post).permit(:title, :body, :image)
-  end
-  
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to index_post_path, notice: '削除しました'
   end
   
-end 
+  private
+  def post_params
+    params.require(:post).permit(:title, :body, :image)
+  end
+end
