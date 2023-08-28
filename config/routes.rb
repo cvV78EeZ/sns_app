@@ -11,10 +11,13 @@ Rails.application.routes.draw do
   post 'posts/new', to: 'posts#create', as: 'create_post'
   
   get 'topics/new', to: 'topics#new', as: 'new_topics'
-  post 'topics/new', to: 'topics#create', as: 'create_topics'
+  post '/topics/new', to: 'topics#create', as: 'create_topics'
   
   get 'topics/edit', to: 'topics#edit', as: 'edit_topics'
   post 'topics/edit', to: 'topics#update', as: 'update_topics'
+  
+   get 'topics/edit/:id', to: 'topics#edit', as: 'edit_topic'
+  post '/topics/edit/:id', to: 'topics#update', as: 'update_topic'
   
   get 'topics/myname', to: "topics#myname", as: 'myname_topics'
   
