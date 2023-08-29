@@ -13,15 +13,8 @@ Rails.application.routes.draw do
   post 'posts/update/:id', to: 'posts#update', as: 'update_post'
   delete '/posts/delete/:id', to: 'posts#destroy', as: 'delete_post'
 
-  # ProfileController
-  get 'profile/new', to: 'profile#new', as: 'new_profile'
-  post '/profile/create', to: 'profile#create', as: 'create_profile'
-  get 'profile/edit', to: 'profile#edit', as: 'edit_profile'
-  post '/profile/update', to: 'profile#update', as: 'update_profile'
-
   get 'topics/myname', to: "topics#myname", as: 'myname_topics'
   get '/profile', to: 'profile#index', as: 'index_profile'
   get '/profile/edit', to: 'profile#edit', as: 'edit_profile'
 
 end
-
