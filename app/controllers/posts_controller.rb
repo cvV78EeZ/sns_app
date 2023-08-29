@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
- before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
-     @title = params[:title]
+    @title = params[:title]
     if @title.present?
       @posts = Post.where('title LIKE ?', "%#{@title}%")
     else
@@ -29,8 +29,8 @@ class PostsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
-　def edit
+
+  def edit
     @post = Post.find(params[:id])
     render :edit
   end
@@ -46,13 +46,13 @@ class PostsController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
-  
+
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to index_post_path, notice: '削除しました'
   end
-  
+
   private
   def post_params
     params.require(:post).permit(:title, :body, :image)
