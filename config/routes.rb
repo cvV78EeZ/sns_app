@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   get '/profile/edit', to: 'profile#edit', as: 'edit_profile'
 
   get 'topics/new', to: 'topics#new', as: 'new_topic'
-  post 'topics/new', to: 'topics#create', as: 'create_topics
+  post 'topics/new', to: 'topics#create', as: 'create_topics'
 end
