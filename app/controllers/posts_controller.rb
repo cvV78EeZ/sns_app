@@ -10,7 +10,6 @@ class PostsController < ApplicationController
     end
     render :index
   end
-
   def new
     @post = Post.new
     render :new
@@ -24,7 +23,7 @@ class PostsController < ApplicationController
     end
 
     if @post.save
-      redirect_to index_post_path, notice: '登録しました'
+      redirect_to index_post_path, notice: '投稿しました'
     else
       render :new, status: :unprocessable_entity
     end

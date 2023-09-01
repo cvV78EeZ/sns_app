@@ -31,7 +31,9 @@
         </div>
 
         <div class="button-group">
-          <%= link_to '削除', destroy_post_path(@post), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn btn-danger" %>
+           <!-- 以下の行を追加する -->
+         <%= link_to '削除', delete_post_path(@post), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn btn-danger" %> 
+        
           <%= f.submit '更新', class: 'btn btn-primary' %>
         </div>
       <% end %>
